@@ -7,7 +7,7 @@
 
 app.addComponent("about", Vue.component('about', {
     template: `<div class="content">
-                    {{ app.translator(message) }}
+                    {{ message.translate() }}
                 </div>`,
     data: function () {
         return {
@@ -22,7 +22,7 @@ app.addComponent("about", Vue.component('about', {
     },
     methods: {
         eventChangeLocale: function () {
-            this.$forceUpdate();
+            this.$forceUpdate()
         }
     }
 

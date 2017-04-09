@@ -11,7 +11,7 @@ let app = express();
 gulp.task('less', function () {
     return gulp.src('public_html/less/**/*.less')
         .pipe(less({
-            paths: [ path.join(__dirname, 'less', 'includes') ]
+            paths: [path.join(__dirname, 'less', 'includes')]
         }))
         .pipe(gulp.dest('public_html/css'));
 });
@@ -22,4 +22,10 @@ app.listen(8888, function () {
     console.log('Example app listening on port 3000!');
 });
 
-app.use('/',  express.static('public_html'));
+gulp.task("default", ["less"]);
+
+app.use('/', express.static('public_html'));
+
+app.post("/api/", (req, res) => {
+    res.json({he: "test"})
+})

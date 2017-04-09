@@ -1,11 +1,11 @@
 /**
  * Created by PyxRu on 4/1/2017.
  */
-Application.prototype.translator = function (key) {
-    key = key.split(".");
+String.prototype.translate = function () {
+    let key = this.split(".");
     if (key.length == 0)
         return "";
-    let translate = app.lang[this.locale];
+    let translate = app.lang[app.getCurrentLocale()];
     try {
         while (key.length != 0) {
             translate = translate[key.shift()]
@@ -14,7 +14,5 @@ Application.prototype.translator = function (key) {
     catch (error) {
         throw "Can't translate " + key;
     }
-
     return translate;
-
 };

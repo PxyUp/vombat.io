@@ -12,7 +12,7 @@ class Application {
         this.eventGlobal = new Vue();
     }
 
-    changeLocale(locale) {
+    setLocale(locale) {
         if (this.allowLocale.indexOf(locale) != -1) {
             this.locale = locale;
             this.eventGlobal.$emit("changeLocale");
@@ -57,7 +57,23 @@ class Application {
     getCurrentLocale() {
         return this.locale
     }
+
+    request(url, param = {}) {
+        let defaultParams = {
+            method: "POST",
+            body: {},
+            cache: "no-cache"
+        }
+        let params = _.extend({}, param, defaultParams)
+        return fetch(url, params)
+            .then(function (response) {
+                return response.json();
+            })
+
+    }
 }
 
+
+Vue.use(VueMaterial);
 Vue.use(VueRouter);
 const app = new Application();
