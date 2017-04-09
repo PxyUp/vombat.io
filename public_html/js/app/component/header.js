@@ -4,7 +4,7 @@
 
 app.addComponent("app-header", Vue.component('app-header', {
     template: `<div class="header">
-                  <md-whiteframe md-tag="md-toolbar" md-elevation="2" md-theme="light-blue" class="md-small">
+                  <md-whiteframe md-tag="md-toolbar" md-elevation="2" md-theme="light-blue" class="md-dense">
                         <div class="md-toolbar-container">
                           <md-button class="md-icon-button" @click.native="$refs.sidenav.toggle()">
                             <md-icon>menu</md-icon>
