@@ -1,7 +1,7 @@
 /**
  * Created by PyxRu on 4/1/2017.
  */
-import {keys} from 'key'
+const keys = require("./keys")
 const TelegramBot = require('node-telegram-bot-api');
 
 // replace the value below with the Telegram token you receive from @BotFather
