@@ -13,10 +13,7 @@
 
 app.addComponent("home", Vue.component('home', {
     template: `<div class="content">
-                    {{ message.translate() }}
-                    <md-whiteframe md-elevation="2" class="form-container">
-                        <add-form></add-form>
-                    </md-whiteframe>
+                    <card-list></card-list>
                 </div>`,
     data: function () {
         return {

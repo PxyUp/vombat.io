@@ -37,6 +37,18 @@ Application.prototype.lang = {
                 "text": "Текст",
                 "file": "Файл"
             }
+        },
+        "card":{
+            "action":{
+                "show": "Посмотреть",
+                "edit": "Редактировать",
+                "delete": "Удалить"
+            }
+        },
+        "cardList":{
+            "element":{
+                "search": "Начните вводить в этом поле"
+            }
         }
     },
     "en": {
@@ -73,6 +85,18 @@ Application.prototype.lang = {
                 "countView": "View count",
                 "text": "Text",
                 "file": "File"
+            }
+        },
+        "card":{
+            "action":{
+                "show": "Show",
+                "edit": "Edit",
+                "delete": "Delete"
+            }
+        },
+        "cardList":{
+            "element":{
+                "search": "Type in this field"
             }
         }
 
