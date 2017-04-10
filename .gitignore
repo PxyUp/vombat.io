@@ -40,7 +40,6 @@ jspm_packages
 .idea
 
 public_html/css
-key.js
 public_html/test.html
 
 
