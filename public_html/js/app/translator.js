@@ -16,3 +16,7 @@ String.prototype.translate = function () {
     }
     return translate;
 };
+
+Application.prototype.translate = function (key){
+    return key.translate()
+}

@@ -2,24 +2,30 @@ html, body {
   margin: 0;
   padding: 0;
 }
-#app.app{
-  > .header{
-    .md-sidenav-content{
+
+#app.app {
+  > .header {
+    .md-sidenav-content {
       background-color: white;
-      .md-list-item{
-        .md-list-item-container{
-          justify-content:flex-start;
-          &.router-link-active{
-            background-color: rgba(153,153,153,0.2);
+      .md-list-item {
+        .md-list-item-container {
+          justify-content: flex-start;
+          &.router-link-active {
+            background-color: rgba(153, 153, 153, 0.2);
           }
         }
       }
     }
   }
-  > .content{
+  > .content {
     width: 100%;
+    .form-container {
+      position: relative;
+      min-height: 300px;
+      display: flex;
+    }
   }
-  > .footer{
+  > .footer {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -27,11 +33,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    .lang{
+    .lang {
       height: 64px;
       line-height: 64px;
       cursor: pointer;
-      &.active{
+      &.active {
 
       }
     }

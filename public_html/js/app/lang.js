@@ -22,6 +22,21 @@ Application.prototype.lang = {
         },
         "faq": {
             "content": "Привет на faq"
+        },
+        "form": {
+            "new": {
+                "type": {
+                    "basic": "Текстовая реклама",
+                    "image": "Реклама товара",
+                    "video": "Видеореклама",
+                    "html": "HTML5 реклама"
+                },
+                "title": "Название",
+                "discription": "Описание",
+                "countView": "Число просмотров",
+                "text": "Текст",
+                "file": "Файл"
+            }
         }
     },
     "en": {
@@ -44,7 +59,23 @@ Application.prototype.lang = {
         },
         "faq": {
             "content": "Hello from faq"
+        },
+        "form": {
+            "new": {
+                "type": {
+                    "basic": "Text ad",
+                    "image": "Image ad",
+                    "video": "Video ad",
+                    "html": "HTML5 ad"
+                },
+                "title": "Title",
+                "discription": "Discription",
+                "countView": "View count",
+                "text": "Text",
+                "file": "File"
+            }
         }
 
     }
+
 }
