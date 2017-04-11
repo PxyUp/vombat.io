@@ -2,7 +2,7 @@
  * Created by PyxRu on 4/10/2017.
  */
 
-app.addComponent("card", Vue.component('card', {
+app.addComponent("card", {
     template: `<md-card>
                   <md-card-header>
                     <md-card-header-text>
@@ -39,15 +39,15 @@ app.addComponent("card", Vue.component('card', {
         eventChangeLocale: function () {
             this.$forceUpdate()
         },
-        showAd: function(){
-            console.log("show ",this.card.id)
+        showAd: function () {
+            console.log("show ", this.card.id)
         },
-        editAd: function(){
-            console.log("edit ",this.card.id)
+        editAd: function () {
+            console.log("edit ", this.card.id)
         },
-        deleteAd: function(){
-            console.log("delete ",this.card.id)
+        deleteAd: function () {
+            console.log("delete ", this.card.id)
         }
     }
 
-}));
+});

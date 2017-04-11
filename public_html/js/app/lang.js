@@ -38,15 +38,15 @@ Application.prototype.lang = {
                 "file": "Файл"
             }
         },
-        "card":{
-            "action":{
+        "card": {
+            "action": {
                 "show": "Посмотреть",
                 "edit": "Редактировать",
                 "delete": "Удалить"
             }
         },
-        "cardList":{
-            "element":{
+        "cardList": {
+            "element": {
                 "search": "Начните вводить в этом поле"
             }
         }
@@ -87,15 +87,15 @@ Application.prototype.lang = {
                 "file": "File"
             }
         },
-        "card":{
-            "action":{
+        "card": {
+            "action": {
                 "show": "Show",
                 "edit": "Edit",
                 "delete": "Delete"
             }
         },
-        "cardList":{
-            "element":{
+        "cardList": {
+            "element": {
                 "search": "Type in this field"
             }
         }

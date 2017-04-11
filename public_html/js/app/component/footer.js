@@ -3,7 +3,7 @@
  */
 
 
-app.addComponent("app-footer", Vue.component('app-footer', {
+app.addComponent("app-footer", {
     template: `<div class="footer">
                    <md-button :disabled="app.getCurrentLocale() == lang" class="lang" v-for="lang in languages" @click.native="changeLocale(lang)" class="md-dense">{{ lang.toUpperCase() }}</md-button>
                 </div>`,
@@ -27,4 +27,4 @@ app.addComponent("app-footer", Vue.component('app-footer', {
         app.getEvents().$off('changeLocale', this.eventChangeLocale)
     }
 
-}));
+});

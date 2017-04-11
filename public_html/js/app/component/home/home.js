@@ -11,13 +11,18 @@
  * Created by PyxRu on 4/2/2017.
  */
 
-app.addComponent("home", Vue.component('home', {
+app.addComponent("home", {
     template: `<div class="content">
                     <card-list></card-list>
                 </div>`,
     data: function () {
         return {
             message: "home.content"
+        }
+    },
+    computed:{
+        localeMessage: function () {
+            return message.translate();
         }
     },
     created: function () {
@@ -32,4 +37,4 @@ app.addComponent("home", Vue.component('home', {
         }
     }
 
-}));
+});

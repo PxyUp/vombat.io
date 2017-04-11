@@ -8,7 +8,7 @@
  * Created by PyxRu on 4/2/2017.
  */
 
-app.addComponent("faq", Vue.component('faq', {
+app.addComponent("faq", {
     template: `<div class="content">
                     {{ message.translate() }}
                 </div>`,
@@ -29,4 +29,4 @@ app.addComponent("faq", Vue.component('faq', {
         }
     }
 
-}));
+});

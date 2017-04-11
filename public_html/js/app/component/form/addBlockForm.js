@@ -3,7 +3,7 @@
  */
 
 
-app.addComponent("add-form", Vue.component('add-form', {
+app.addComponent("add-form", {
     template: `<md-tabs md-fixed>
                      <md-tab v-for="(tab, index) in tabs" :md-active="index == 0" :md-icon="tab.icon">
                          <form novalidate @submit.stop.prevent="submit">
@@ -142,4 +142,4 @@ app.addComponent("add-form", Vue.component('add-form', {
         }
     }
 
-}));
+});

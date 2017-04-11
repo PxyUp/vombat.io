@@ -26,7 +26,11 @@ class Application {
             base: "/"
         });
         this.app = new Vue({
-            router: this.router
+            router: this.router,
+            components: {
+                "app-header": app.getComponent("app-header"),
+                "app-footer": app.getComponent("app-footer"),
+            }
         }).$mount(selector);
     }
 

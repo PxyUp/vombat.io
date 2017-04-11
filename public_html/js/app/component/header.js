@@ -2,7 +2,7 @@
  * Created by PyxRu on 4/1/2017.
  */
 
-app.addComponent("app-header", Vue.component('app-header', {
+app.addComponent("app-header", {
     template: `<div class="header">
                   <md-whiteframe md-tag="md-toolbar" md-elevation="2" md-theme="light-blue" class="md-dense">
                         <div class="md-toolbar-container">
@@ -62,4 +62,4 @@ app.addComponent("app-header", Vue.component('app-header', {
             this.$forceUpdate()
         }
     }
-}));
+});

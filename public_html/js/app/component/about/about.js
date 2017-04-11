@@ -5,7 +5,7 @@
  * Created by PyxRu on 4/2/2017.
  */
 
-app.addComponent("about", Vue.component('about', {
+app.addComponent("about", {
     template: `<div class="content">
                     {{ message.translate() }}
                 </div>`,
@@ -26,4 +26,4 @@ app.addComponent("about", Vue.component('about', {
         }
     }
 
-}));
+});
