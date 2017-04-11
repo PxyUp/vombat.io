@@ -24,7 +24,7 @@ app.addComponent("card-list", Vue.component('card-list', {
                           </md-button>
                     </div>
                     <div class="content" :class="[isReverse ? 'reverse' : 'default']">
-                        <card v-for="card in search(cards)" :id="card.id" :title="card.title" :discription="card.discription" :url="card.url"></card>        
+                        <card v-for="card in search(cards)" :card="card"></card>        
                     </div>
                     <md-button class="md-fab md-fab-bottom-right" @click.native="addCards()">
                       <md-icon>add</md-icon>

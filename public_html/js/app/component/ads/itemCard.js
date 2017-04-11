@@ -6,19 +6,19 @@ app.addComponent("card", Vue.component('card', {
     template: `<md-card>
                   <md-card-header>
                     <md-card-header-text>
-                      <div class="md-title">{{ title }}</div>
-                      <div class="md-subhead">{{ discription }}</div>
+                      <div class="md-title">{{ card.title }}</div>
+                      <div class="md-subhead">{{ card.discription }}</div>
                     </md-card-header-text>
                 
                     <md-card-media>
-                      <img :src="url" :alt="title">
+                      <img :src="card.url" :alt="card.title">
                     </md-card-media>
                   </md-card-header>
                 
                   <md-card-actions>
-                    <md-button @click.native="showAd(id)">{{ showAction.translate() }}</md-button>
-                    <md-button @click.native="editAd(id)">{{ editAction.translate() }}</md-button>
-                    <md-button @click.native="deleteAd(id)">{{ deleteAction.translate() }}</md-button>
+                    <md-button @click.native="showAd()">{{ showAction.translate() }}</md-button>
+                    <md-button @click.native="editAd()">{{ editAction.translate() }}</md-button>
+                    <md-button @click.native="deleteAd()">{{ deleteAction.translate() }}</md-button>
                   </md-card-actions>
                 </md-card>`,
     data: function () {
@@ -28,7 +28,7 @@ app.addComponent("card", Vue.component('card', {
             deleteAction: "card.action.delete"
         }
     },
-    props: ['id', 'title', "discription", "url"],
+    props: ['card'],
     created: function () {
         app.getEvents().$on("changeLocale", this.eventChangeLocale)
     },
@@ -39,14 +39,14 @@ app.addComponent("card", Vue.component('card', {
         eventChangeLocale: function () {
             this.$forceUpdate()
         },
-        showAd: function(id){
-            console.log("show ",id)
+        showAd: function(){
+            console.log("show ",this.card.id)
         },
-        editAd: function(id){
-            console.log("edit ",id)
+        editAd: function(){
+            console.log("edit ",this.card.id)
         },
-        deleteAd: function(id){
-            console.log("delete ",id)
+        deleteAd: function(){
+            console.log("delete ",this.card.id)
         }
     }
 
