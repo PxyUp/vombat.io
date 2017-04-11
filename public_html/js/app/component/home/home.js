@@ -20,10 +20,8 @@ app.addComponent("home", {
             message: "home.content"
         }
     },
-    computed:{
-        localeMessage: function () {
-            return message.translate();
-        }
+    components: {
+        "card-list": app.getComponent("card-list")
     },
     created: function () {
         app.getEvents().$on("changeLocale", this.eventChangeLocale)

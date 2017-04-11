@@ -2,7 +2,7 @@
  * Created by PyxRu on 4/10/2017.
  */
 
-app.addComponent("card-list", Vue.component('card-list', {
+app.addComponent("card-list", {
     template: `<div class="card-list">
                     <div class="header">
 
@@ -72,4 +72,4 @@ app.addComponent("card-list", Vue.component('card-list', {
         }
     }
 
-}));
+});
