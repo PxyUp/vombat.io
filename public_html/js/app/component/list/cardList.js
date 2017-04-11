@@ -27,7 +27,7 @@ app.addComponent("card-list", {
                     <div class="content" :class="[isReverse ? 'reverse' : 'default']">
                         <card v-for="card in search(cards)" :card="card"></card>        
                     </div>
-                    <md-button class="md-fab md-fab-bottom-right" id="fab" @click.native="modal = !modal">
+                    <md-button class="md-fab md-fab-bottom-right add-button" @click.native="modal = !modal">
                       <md-icon>add</md-icon>
                     </md-button>
                     

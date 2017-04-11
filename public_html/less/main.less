@@ -1,4 +1,5 @@
 @desktop: 960px;
+@bottom-padding: 64px;
 
 html, body {
   margin: 0;
@@ -25,7 +26,7 @@ html, body {
   > .content {
     width: 100%;
     padding: 10px 10px;
-    height: calc(~"100% - 64px - 48px");
+    margin-bottom: @bottom-padding*2;
     position: relative;
     .form-container {
       position: relative;
@@ -33,13 +34,16 @@ html, body {
       display: flex;
     }
     .card-list {
-      height: 100%;
       .header {
         height: 40px;
         margin: 10px 0px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+      }
+      .add-button {
+        position: fixed;
+        bottom: @bottom-padding;
       }
       .content {
         display: flex;
@@ -56,6 +60,7 @@ html, body {
             flex-direction: column-reverse;
           }
         }
+
         .md-card {
           width: 100%;
           max-width: 400px;
@@ -92,8 +97,26 @@ html, body {
   }
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
 }
