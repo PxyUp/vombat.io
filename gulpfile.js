@@ -18,7 +18,7 @@ gulp.task('less', function () {
 
 gulp.watch('public_html/less/**/*.less', ['less']);
 
-app.listen(8888, function () {
+app.listen(80, function () {
     console.log('Example app listening on port 3000!');
 });
 
