@@ -44,3 +44,8 @@ app.post("/api/cards/list", (req, res) => {
 });
 
 app.use('/', express.static('public_html'));
+
+app.all('/*', function(req, res, next) {
+    // Just send the index.html for other files to support HTML5Mode
+    res.sendFile('public_html/index.html', { root: __dirname });
+});
