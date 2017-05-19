@@ -1,2 +1,2 @@
 # vombat.io
-SPA
+CPA
